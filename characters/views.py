@@ -10,7 +10,7 @@ from .models import Character
 
 # Create your views here.
 class CharactersView(APIView):
-    """View class for books/ for viewing all and creating"""
+    """View class for characters/ for viewing all and creating"""
     def get(self, request):
         characters = Character.objects.all()
         serializer = CharacterSerializer(characters, many=True)
@@ -23,7 +23,7 @@ class CharactersView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class CharacterDetailView(APIView):
-    """View class for books/:pk for viewing a single book, updating a single book, or rmoving a single book"""
+    """View class for characters/:pk for viewing a single character, updating a single character, or removing a single character"""
     def get(self, request,pk):
         character = get_object_or_404(Character, pk=pk)
         serializer = CharacterSerializer(character)

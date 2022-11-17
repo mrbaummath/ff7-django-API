@@ -9,7 +9,7 @@ from .models import Materia
 
 # Create your views here.
 class MateriasView(APIView):
-    """View class for books/ for viewing all and creating"""
+    """View class for materia/ for viewing all and creating"""
     def get(self, request):
         materias = Materia.objects.all()
         serializer = MateriaSerializer(materias, many=True)
@@ -23,7 +23,7 @@ class MateriasView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class MateriaDetailView(APIView):
-    """View class for books/:pk for viewing a single book, updating a single book, or rmoving a single book"""
+    """View class for materia/:pk for viewing a single materia, updating a single materia, or rmoving a single materia"""
     def get(self, request,pk):
         materia = get_object_or_404(Materia, pk=pk)
         serializer = MateriaSerializer(materia)
