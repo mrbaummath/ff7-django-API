@@ -10,6 +10,7 @@ from .models import Materia
 # Create your views here.
 class MateriasView(APIView):
     """View class for materia/ for viewing all and creating"""
+    serializer_class = MateriaSerializer
     def get(self, request):
         materias = Materia.objects.all()
         serializer = MateriaSerializer(materias, many=True)

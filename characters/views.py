@@ -11,6 +11,7 @@ from .models import Character
 # Create your views here.
 class CharactersView(APIView):
     """View class for characters/ for viewing all and creating"""
+    serializer_class = CharacterSerializer
     def get(self, request):
         characters = Character.objects.all()
         serializer = CharacterSerializer(characters, many=True)
