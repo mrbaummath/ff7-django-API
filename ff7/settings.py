@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'characters',
     'materia',
-    'spells',
     'rest_framework'
 ]
 

@@ -1,10 +1,10 @@
-from .serializers import SpellSerializer, SpellReadSerializer
+from  ..serializers import SpellSerializer, SpellReadSerializer
 from django.shortcuts import render, get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from .models import Spell
+from ..models.spell import Spell
 
 
 # Create your views here.

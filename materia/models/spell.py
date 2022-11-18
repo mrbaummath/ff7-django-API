@@ -1,5 +1,5 @@
 from django.db import models
-from ..materia.models import Materia
+from .materia import Materia
 
 class Spell(models.Model):
     name= models.CharField(max_length=100)

@@ -1,10 +1,10 @@
-from materia.serializers import MateriaSerializer
+from ..serializers import MateriaSerializer
 from django.shortcuts import render, get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from .models import Materia
+from ..models.materia import Materia
 
 
 # Create your views here.
